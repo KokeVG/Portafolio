@@ -1183,3 +1183,7 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+
+.img-logo {
+  margin-right: 15px;
+}
