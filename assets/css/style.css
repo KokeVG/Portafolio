@@ -1187,3 +1187,7 @@ section .container {
 .img-logo {
   margin-right: 15px;
 }
+
+.text-justify{
+  text-align: justify;
+}
