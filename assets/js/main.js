@@ -185,6 +185,135 @@
   });
 
   /**
+   * Portafolio proyectos
+   */
+
+  let proyectos = [{
+      id: 1,
+      nombre: 'Proyecto 1',
+      desc: 'asdasdasd',
+      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
+      pag: 'www.example1.com',
+      github: 'github1',
+      img1: 'assets/img/portfolio/portfolio-1.jpg',
+      img2: 'assets/img/portfolio/portfolio-2.jpg',
+      img3: 'assets/img/portfolio/portfolio-3.jpg'
+    },
+    {
+      id: 2,
+      nombre: 'Proyecto 2',
+      desc: 'asdasdasd',
+      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
+      pag: 'www.example2.com',
+      github: 'github2',
+      img1: 'assets/img/portfolio/portfolio-1.jpg',
+      img2: 'assets/img/portfolio/portfolio-2.jpg',
+      img3: ''
+    },
+    {
+      id: 3,
+      nombre: 'Proyecto 3',
+      desc: 'asdasdasd',
+      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
+      pag: 'www.example3.com',
+      github: 'github3',
+      img1: 'assets/img/portfolio/portfolio-2.jpg',
+      img2: 'assets/img/portfolio/portfolio-1.jpg',
+      img3: ''
+    },
+    {
+      id: 4,
+      nombre: 'Proyecto 4',
+      desc: 'asdasdasd',
+      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
+      pag: 'www.example4.com',
+      github: 'github4',
+      img1: 'assets/img/portfolio/portfolio-3.jpg',
+      img2: 'assets/img/portfolio/portfolio-2.jpg',
+      img3: ''
+    },
+    {
+      id: 5,
+      nombre: 'Proyecto 5',
+      desc: 'asdasdasd',
+      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
+      pag: 'www.example5.com',
+      github: 'github5',
+      img1: 'assets/img/portfolio/portfolio-1.jpg',
+      img2: 'assets/img/portfolio/portfolio-3.jpg',
+      img3: ''
+    },
+    {
+      id: 6,
+      nombre: 'Proyecto 6',
+      desc: 'asdasdasd',
+      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
+      pag: 'www.example6.com',
+      github: 'github6',
+      img1: 'assets/img/portfolio/portfolio-3.jpg',
+      img2: 'assets/img/portfolio/portfolio-2.jpg',
+      img3: ''
+    },
+    {
+      id: 7,
+      nombre: 'Proyecto 7',
+      desc: 'asdasdasd',
+      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
+      pag: 'www.example7.com',
+      github: 'github7',
+      img1: 'assets/img/portfolio/portfolio-2.jpg',
+      img2: 'assets/img/portfolio/portfolio-1.jpg',
+      img3: ''
+  }]
+
+  var resultado  = document.getElementById('div-proyectos'); 
+  var fragment = document.createDocumentFragment();
+    
+  for(let item of proyectos) {
+    var div = document.createElement('div');
+    switch(item.id){
+      case 1: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch');
+      case 2: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0');
+      case 3: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0');
+      default: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4');
+    }
+    var a = document.createElement('a');
+    a.setAttribute('href', 'portfolio-details.html');
+    a.setAttribute('data-gallery', 'portfolioDetailsGallery');
+    a.setAttribute('data-glightbox', 'type: external');
+    a.setAttribute('class', 'portfolio-details-lightbox');
+    a.setAttribute('title', item.nombre);
+    div.appendChild(a);
+    var div2 = document.createElement('div');
+    div2.setAttribute('class', 'icon-box');
+    a.appendChild(div2);
+    var img = document.createElement('img');
+    img.setAttribute('src', item.img1);
+    img.setAttribute('class', 'img-fluid');
+    img.setAttribute('alt', '');
+    var h4 = document.createElement('h4');
+    h4.appendChild(document.createTextNode(item.nombre));
+    var p = document.createElement('p');
+    p.appendChild(document.createTextNode(item.desc));
+    div2.appendChild(img);
+    div2.appendChild(h4);
+    div2.appendChild(p);
+
+
+    fragment.appendChild(div);
+    console.log(div)
+    
+  }
+  /*
+    Agregamos el fragmento al elemento del DOM
+    al salir del bucle, de modo que el DOM
+    se renderizará una sola vez, no N veces
+  */
+  resultado.appendChild(fragment);
+  console.log(resultado)
+
+
+  /**
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
