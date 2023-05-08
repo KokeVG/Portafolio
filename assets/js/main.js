@@ -192,15 +192,22 @@
       nombre: 'Gestión vehicular',
       desc: 'Sistema de gestión vehicular con reconocimiento de patentes vehiculares para recinto, permite ver y registrar datos asociados entre vehiculos, estacionamientos y departamentos ademas de reconocer las patentes vehiculares por medio de visión computacional.',
       github: 'https://github.com/KokeVG/gestion-vehicular',
-      imgs: ['assets/img/portfolio/portfolio-1.jpg'],
+      imgs: ['assets/img/portafolio/gestion-vehicular/gestion1.png'],
       herramientas: ['assets/img/skills/django.png', 'assets/img/skills/python.png', 'assets/img/skills/mysql.png']
     },
     {
+      nombre: 'Gestión vehicular móvil',
+      desc: 'Aplicación móvil que permite ver el estado de los estacionamients registrados en el sistema Gestión vehicular por medio de una API.',
+      github: 'https://github.com/KokeVG/gestion-vehicular-movil',
+      imgs: ['assets/img/portafolio/gestion-vehicular-movil/gestion-movil1.png', 'assets/img/portafolio/gestion-vehicular-movil/gestion-movil2.png'],
+      herramientas: ['assets/img/skills/reactnative.png']
+    },
+    {
       nombre: 'Promediando',
-      desc: 'Aplicación móvil android que permite calcular promedios de notas ponderados para un entorno estudiantil',
+      desc: 'Aplicación móvil android que permite calcular promedios de notas ponderados para un entorno estudiantil.',
       pagina: 'https://play.google.com/store/apps/details?id=koke.promediando',
       github: 'https://github.com/KokeVG/promediando',
-      imgs: ['assets/img/portfolio/portfolio-2.jpg'],
+      imgs: ['assets/img/portafolio/promediando/promediando1.png', 'assets/img/portafolio/promediando/promediando2.png', 'assets/img/portafolio/promediando/promediando3.png', 'assets/img/portafolio/promediando/promediando4.png'],
       herramientas: ['assets/img/skills/android-studio.png', 'assets/img/skills/java.png']
     },
     {
@@ -208,14 +215,14 @@
       desc: 'Aplicación móvil que permite ver la disponibiliad de los dispositivos de un establecimiento.',
       pag: 'https://play.google.com/store/apps/details?id=koke.organilab',
       github: 'https://github.com/KokeVG/organilab-movil',
-      imgs: ['assets/img/portfolio/portfolio-3.jpg'],
+      imgs: ['assets/img/portafolio/organilab-movil/organilab1.png', 'assets/img/portafolio/organilab-movil/organilab2.png', 'assets/img/portafolio/organilab-movil/organilab3.png'],
       herramientas: ['assets/img/skills/ionic.png', 'assets/img/skills/java.png']
     },
     {
-      nombre: 'Agenda de contactos',
+      nombre: 'Agenda telefónica',
       desc: 'Aplicación Java que permite crear, ver, editar y eliminar datos de agenda de contactos.',
-      github: 'https://github.com/KokeVG/agenda-contactos',
-      imgs: ['assets/img/portfolio/portfolio-2.jpg'],
+      github: 'https://github.com/KokeVG/agenda-telefonica',
+      imgs: ['assets/img/portafolio/agenda-telefonica/agenda1.png', 'assets/img/portafolio/agenda-telefonica/agenda2.png', 'assets/img/portafolio/agenda-telefonica/agenda3.png'],
       herramientas: ['assets/img/skills/java.png']
     }]
 
@@ -241,7 +248,7 @@
           h4.setAttribute('class', 'text-white');
           h4.appendChild(document.createTextNode(item.nombre));
           var p = document.createElement('p');
-          p.setAttribute('class', 'text-white');
+          p.setAttribute('class', 'text-justify text-white');
           p.appendChild(document.createTextNode(item.desc));
           var gh = document.createElement('p');
           gh.setAttribute('class', 'text-white');
