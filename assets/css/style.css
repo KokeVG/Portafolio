@@ -1,11 +1,3 @@
-/**
-* Template Name: Personal
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -55,9 +47,9 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Header
+# Inicio
 --------------------------------------------------------------*/
-#header {
+#inicio {
   transition: ease-in-out 0.3s;
   position: relative;
   height: 100vh;
@@ -67,11 +59,11 @@ h6 {
   overflow-y: auto;
 }
 
-#header * {
+#inicio * {
   transition: ease-in-out 0.3s;
 }
 
-#header h1 {
+#inicio h1 {
   font-size: 48px;
   margin: 0;
   padding: 0;
@@ -80,36 +72,36 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#header h1 a,
-#header h1 a:hover {
+#inicio h1 a,
+#inicio h1 a:hover {
   color: #fff;
   line-height: 1;
   display: inline-block;
 }
 
-#header h2 {
+#inicio h2 {
   font-size: 24px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-#header h2 span {
+#inicio h2 span {
   color: #fff;
   border-bottom: 2px solid #18d26e;
   padding-bottom: 6px;
 }
 
-#header img {
+#inicio img {
   padding: 0;
   margin: 0;
 }
 
-#header .social-links {
+#inicio .social-links {
   margin-top: 40px;
   display: flex;
 }
 
-#header .social-links a {
+#inicio .social-links a {
   font-size: 16px;
   display: flex;
   justify-content: center;
@@ -123,25 +115,25 @@ h6 {
   height: 40px;
 }
 
-#header .social-links a:hover {
+#inicio .social-links a:hover {
   background: #18d26e;
 }
 
 @media (max-width: 992px) {
-  #header h1 {
+  #inicio h1 {
     font-size: 36px;
   }
 
-  #header h2 {
+  #inicio h2 {
     font-size: 20px;
     line-height: 30px;
   }
 
-  #header .social-links {
+  #inicio .social-links {
     margin-top: 15px;
   }
 
-  #header .container {
+  #inicio .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,7 +141,7 @@ h6 {
 }
 
 /* Header Top */
-#header.header-top {
+#inicio.header-top {
   height: 80px;
   position: fixed;
   left: 0;
@@ -158,31 +150,31 @@ h6 {
   background: rgba(0, 0, 0, 0.9);
 }
 
-#header.header-top .social-links,
-#header.header-top h2 {
+#inicio.header-top .social-links,
+#inicio.header-top h2 {
   display: none;
 }
 
-#header.header-top h1 {
+#inicio.header-top h1 {
   margin-right: auto;
   font-size: 36px;
 }
 
-#header.header-top .container {
+#inicio.header-top .container {
   display: flex;
   align-items: center;
 }
 
-#header.header-top .navbar {
+#inicio.header-top .navbar {
   margin: 0;
 }
 
 @media (max-width: 768px) {
-  #header.header-top {
+  #inicio.header-top {
     height: 60px;
   }
 
-  #header.header-top h1 {
+  #inicio.header-top h1 {
     font-size: 26px;
   }
 }
@@ -1029,119 +1021,6 @@ section .container {
   margin: 0 0 0 68px;
 }
 
-.contact .info-box .social-links {
-  margin: 5px 0 0 68px;
-  display: flex;
-}
-
-.contact .info-box .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  color: #fff;
-  line-height: 1;
-  margin-right: 12px;
-  transition: 0.3s;
-}
-
-.contact .info-box .social-links a:hover {
-  color: #18d26e;
-}
-
-.contact .php-email-form {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  background: rgba(255, 255, 255, 0.08);
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  background: rgba(255, 255, 255, 0.08);
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: rgba(255, 255, 255, 0.08);
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 0;
-  transition: 0.3s;
-  color: #fff;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  background-color: rgba(255, 255, 255, 0.11);
-}
-
-.contact .php-email-form input::-moz-placeholder,
-.contact .php-email-form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-}
-
-.contact .php-email-form input::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-}
-
-.contact .php-email-form input {
-  padding: 10px 15px;
-}
-
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #18d26e;
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #15bb62;
-}
-
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
@@ -1153,33 +1032,46 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Credits
+# Agregado
 --------------------------------------------------------------*/
-.credits {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding: 15px;
-  text-align: right;
-  font-size: 13px;
-  color: #fff;
-  z-index: 999999;
+
+.img-logo {
+  margin-right: 15px;
 }
 
-@media (max-width: 992px) {
-  .credits {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-  }
+.text-justify{
+  text-align: justify;
 }
 
-.credits a {
+.box-cv {
+  padding: 20px;
+  width: 100%;
+}
+
+.box-cv i.bx {
+  font-size: 24px;
   color: #18d26e;
-  transition: 0.3s;
+  border-radius: 50%;
+  padding: 14px;
+  float: left;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.credits a:hover {
+.box-cv h3 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin: 10px 0 8px 68px;
+}
+
+.box-cv p {
+  padding: 0;
   color: #fff;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 0 0 0 68px;
+}
+
+.text-white {
+  color: white;
 }
