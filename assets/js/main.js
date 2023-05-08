@@ -63,7 +63,7 @@
       e.preventDefault()
 
       let navbar = select('#navbar')
-      let header = select('#header')
+      let header = select('#inicio')
       let sections = select('section', true)
       let navlinks = select('#navbar .nav-link', true)
 
@@ -80,7 +80,7 @@
         navbarToggle.classList.toggle('bi-x')
       }
 
-      if (this.hash == '#header') {
+      if (this.hash == '#inicio') {
         header.classList.remove('header-top')
         sections.forEach((item) => {
           item.classList.remove('section-show')
@@ -116,7 +116,7 @@
       let initial_nav = select(window.location.hash)
 
       if (initial_nav) {
-        let header = select('#header')
+        let header = select('#inicio')
         let navlinks = select('#navbar .nav-link', true)
 
         header.classList.add('header-top')
@@ -189,129 +189,77 @@
    */
 
   let proyectos = [{
-      id: 1,
-      nombre: 'Proyecto 1',
-      desc: 'asdasdasd',
-      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
-      pag: 'www.example1.com',
-      github: 'github1',
-      img1: 'assets/img/portfolio/portfolio-1.jpg',
-      img2: 'assets/img/portfolio/portfolio-2.jpg',
-      img3: 'assets/img/portfolio/portfolio-3.jpg'
+      nombre: 'Gestión vehicular',
+      desc: 'Sistema de gestión vehicular con reconocimiento de patentes vehiculares para recinto, permite ver y registrar datos asociados entre vehiculos, estacionamientos y departamentos ademas de reconocer las patentes vehiculares por medio de visión computacional.',
+      github: 'https://github.com/KokeVG/gestion-vehicular',
+      imgs: ['assets/img/portfolio/portfolio-1.jpg'],
+      herramientas: ['assets/img/skills/django.png', 'assets/img/skills/python.png', 'assets/img/skills/mysql.png']
     },
     {
-      id: 2,
-      nombre: 'Proyecto 2',
-      desc: 'asdasdasd',
-      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
-      pag: 'www.example2.com',
-      github: 'github2',
-      img1: 'assets/img/portfolio/portfolio-1.jpg',
-      img2: 'assets/img/portfolio/portfolio-2.jpg',
-      img3: ''
+      nombre: 'Promediando',
+      desc: 'Aplicación móvil android que permite calcular promedios de notas ponderados para un entorno estudiantil',
+      pagina: 'https://play.google.com/store/apps/details?id=koke.promediando',
+      github: 'https://github.com/KokeVG/promediando',
+      imgs: ['assets/img/portfolio/portfolio-2.jpg'],
+      herramientas: ['assets/img/skills/android-studio.png', 'assets/img/skills/java.png']
     },
     {
-      id: 3,
-      nombre: 'Proyecto 3',
-      desc: 'asdasdasd',
-      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
-      pag: 'www.example3.com',
-      github: 'github3',
-      img1: 'assets/img/portfolio/portfolio-2.jpg',
-      img2: 'assets/img/portfolio/portfolio-1.jpg',
-      img3: ''
+      nombre: 'Organilab móvil',
+      desc: 'Aplicación móvil que permite ver la disponibiliad de los dispositivos de un establecimiento.',
+      pag: 'https://play.google.com/store/apps/details?id=koke.organilab',
+      github: 'https://github.com/KokeVG/organilab-movil',
+      imgs: ['assets/img/portfolio/portfolio-3.jpg'],
+      herramientas: ['assets/img/skills/ionic.png', 'assets/img/skills/java.png']
     },
     {
-      id: 4,
-      nombre: 'Proyecto 4',
-      desc: 'asdasdasd',
-      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
-      pag: 'www.example4.com',
-      github: 'github4',
-      img1: 'assets/img/portfolio/portfolio-3.jpg',
-      img2: 'assets/img/portfolio/portfolio-2.jpg',
-      img3: ''
-    },
-    {
-      id: 5,
-      nombre: 'Proyecto 5',
-      desc: 'asdasdasd',
-      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
-      pag: 'www.example5.com',
-      github: 'github5',
-      img1: 'assets/img/portfolio/portfolio-1.jpg',
-      img2: 'assets/img/portfolio/portfolio-3.jpg',
-      img3: ''
-    },
-    {
-      id: 6,
-      nombre: 'Proyecto 6',
-      desc: 'asdasdasd',
-      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
-      pag: 'www.example6.com',
-      github: 'github6',
-      img1: 'assets/img/portfolio/portfolio-3.jpg',
-      img2: 'assets/img/portfolio/portfolio-2.jpg',
-      img3: ''
-    },
-    {
-      id: 7,
-      nombre: 'Proyecto 7',
-      desc: 'asdasdasd',
-      desc_large: 'qweqweqweqweqweqweqwwqeqwe',
-      pag: 'www.example7.com',
-      github: 'github7',
-      img1: 'assets/img/portfolio/portfolio-2.jpg',
-      img2: 'assets/img/portfolio/portfolio-1.jpg',
-      img3: ''
-  }]
+      nombre: 'Agenda de contactos',
+      desc: 'Aplicación Java que permite crear, ver, editar y eliminar datos de agenda de contactos.',
+      github: 'https://github.com/KokeVG/agenda-contactos',
+      imgs: ['assets/img/portfolio/portfolio-2.jpg'],
+      herramientas: ['assets/img/skills/java.png']
+    }]
 
-  var resultado  = document.getElementById('div-proyectos'); 
-  var fragment = document.createDocumentFragment();
+  var obtenerProyectos = function() {
+    var resultado = document.getElementById('div-proyectos'); 
+    var fragment = document.createDocumentFragment();
     
-  for(let item of proyectos) {
-    var div = document.createElement('div');
-    switch(item.id){
-      case 1: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch');
-      case 2: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0');
-      case 3: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0');
-      default: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4');
+    for(let item of proyectos) {
+      var div = document.createElement('div');
+      switch(item.id){
+        case 1: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch');
+        case 2: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0');
+        case 3: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0');
+        default: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4');
+      }
+        var div2 = document.createElement('div');
+        div2.setAttribute('class', 'icon-box');
+        div.appendChild(div2);
+          var img = document.createElement('img');
+          img.setAttribute('src', item.imgs[0]);
+          img.setAttribute('class', 'img-fluid');
+          var h4 = document.createElement('h4');
+          h4.setAttribute('class', 'text-white');
+          h4.appendChild(document.createTextNode(item.nombre));
+          var p = document.createElement('p');
+          p.setAttribute('class', 'text-white');
+          p.appendChild(document.createTextNode(item.desc));
+          var gh = document.createElement('p');
+          gh.setAttribute('class', 'text-white');
+          var agh = document.createElement('a');
+          agh.setAttribute('href', item.github);
+          agh.setAttribute('target', '_blank');
+          agh.appendChild(document.createTextNode(item.github));
+          gh.appendChild(agh);
+          div2.appendChild(img);
+          div2.appendChild(h4);
+          div2.appendChild(p);
+          div2.appendChild(gh);
+
+      fragment.appendChild(div);  
     }
-    var a = document.createElement('a');
-    a.setAttribute('href', 'portfolio-details.html');
-    a.setAttribute('data-gallery', 'portfolioDetailsGallery');
-    a.setAttribute('data-glightbox', 'type: external');
-    a.setAttribute('class', 'portfolio-details-lightbox');
-    a.setAttribute('title', item.nombre);
-    div.appendChild(a);
-    var div2 = document.createElement('div');
-    div2.setAttribute('class', 'icon-box');
-    a.appendChild(div2);
-    var img = document.createElement('img');
-    img.setAttribute('src', item.img1);
-    img.setAttribute('class', 'img-fluid');
-    img.setAttribute('alt', '');
-    var h4 = document.createElement('h4');
-    h4.appendChild(document.createTextNode(item.nombre));
-    var p = document.createElement('p');
-    p.appendChild(document.createTextNode(item.desc));
-    div2.appendChild(img);
-    div2.appendChild(h4);
-    div2.appendChild(p);
-
-
-    fragment.appendChild(div);
-    console.log(div)
-    
+    resultado.appendChild(fragment);
   }
-  /*
-    Agregamos el fragmento al elemento del DOM
-    al salir del bucle, de modo que el DOM
-    se renderizará una sola vez, no N veces
-  */
-  resultado.appendChild(fragment);
-  console.log(resultado)
-
+  obtenerProyectos();
 
   /**
    * Porfolio isotope and filter
