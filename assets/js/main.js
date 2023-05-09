@@ -189,6 +189,7 @@
    */
 
   let proyectos = [{
+      id: 1,
       nombre: 'Gestión vehicular',
       desc: 'Sistema de gestión vehicular con reconocimiento de patentes vehiculares para recinto, permite ver y registrar datos asociados entre vehiculos, estacionamientos y departamentos ademas de reconocer las patentes vehiculares por medio de visión computacional.',
       github: 'https://github.com/KokeVG/gestion-vehicular',
@@ -196,6 +197,7 @@
       herramientas: ['django.png', 'python.png', 'mysql.png']
     },
     {
+      id: 2,
       nombre: 'Gestión vehicular móvil',
       desc: 'Aplicación móvil que permite ver el estado de los estacionamients registrados en el sistema Gestión vehicular por medio de una API.',
       github: 'https://github.com/KokeVG/gestion-vehicular-movil',
@@ -203,6 +205,7 @@
       herramientas: ['reactnative.png']
     },
     {
+      id: 3,
       nombre: 'Promediando',
       desc: 'Aplicación móvil android que permite calcular promedios de notas ponderados para un entorno estudiantil.',
       pagina: { sitio: 'Google Play', link: 'https://play.google.com/store/apps/details?id=koke.promediando'}, 
@@ -211,6 +214,7 @@
       herramientas: ['android-studio.png', 'java.png']
     },
     {
+      id: 4,
       nombre: 'Organilab móvil',
       desc: 'Aplicación móvil que permite ver la disponibiliad de los dispositivos de un establecimiento.',
       pagina: { sitio: 'Google Play', link: 'https://play.google.com/store/apps/details?id=koke.organilab'},
@@ -219,6 +223,7 @@
       herramientas: ['ionic.png']
     },
     {
+      id: 5,
       nombre: 'Agenda telefónica',
       desc: 'Aplicación Java que permite crear, ver, editar y eliminar datos de agenda de contactos.',
       github: 'https://github.com/KokeVG/agenda-telefonica',
@@ -242,6 +247,7 @@
         div2.setAttribute('class', 'icon-box');
         div.appendChild(div2);
           var img = document.createElement('img');
+          img.setAttribute('id', 'img'+item.id);
           img.setAttribute('src', item.imgs[0]);
           img.setAttribute('alt', item.nombre);
           img.setAttribute('class', 'img-fluid');
@@ -251,7 +257,21 @@
           h4.appendChild(document.createTextNode(item.nombre));
           var p = document.createElement('p');
           p.appendChild(document.createTextNode(item.desc));
+          div2.appendChild(img);
+          div2.appendChild(h4);
+          div2.appendChild(p);
+          for(var i=0; i<item.herramientas.length; i++){
+            var logo = document.createElement('img');
+            logo.setAttribute('src', 'assets/img/skills/'+item.herramientas[i]);
+            logo.setAttribute('class', 'img-logo-portafolio');
+            logo.setAttribute('alt', item.herramientas[i]);
+            div2.appendChild(logo);
+          }
+
+
+
           var gh = document.createElement('p');
+          gh.setAttribute('class', 'text-izq');
           var elgh = document.createElement('i');
           elgh.setAttribute('class', 'bx bx-link-external');
           var agh = document.createElement('a');
@@ -260,12 +280,11 @@
           gh.appendChild(document.createTextNode('Github'));
           gh.appendChild(elgh);
           agh.appendChild(gh);
-          div2.appendChild(img);
-          div2.appendChild(h4);
-          div2.appendChild(p);
           div2.appendChild(agh);
           if(item.pagina != undefined){
             var link = document.createElement('p');
+            link.setAttribute('class', 'text-izq');
+
             var alink = document.createElement('a');
             var el = document.createElement('i');
             el.setAttribute('class', 'bx bx-link-external');
@@ -276,19 +295,62 @@
             alink.appendChild(link);
             div2.appendChild(alink);
           }
-          for(var i=0; i<item.herramientas.length; i++){
-            var logo = document.createElement('img');
-            logo.setAttribute('src', 'assets/img/skills/'+item.herramientas[i]);
-            logo.setAttribute('class', 'img-logo-portafolio');
-            logo.setAttribute('alt', item.herramientas[i]);
-            div2.appendChild(logo);
-          }
+          
 
       fragment.appendChild(div);  
     }
     resultado.appendChild(fragment);
   }
   obtenerProyectos();
+
+
+  // Get the modal
+  var modal = document.getElementById("modal");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img1 = document.getElementById('img1');
+  var img2 = document.getElementById('img2');
+  var img3 = document.getElementById('img3');
+  var img4 = document.getElementById('img4');
+  var img5 = document.getElementById('img5');
+  var modalImg = document.getElementById("img-modal");
+
+  img1.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+  img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+  img3.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+  img4.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+  img5.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  modal.onclick = function() { 
+    modal.style.display = "none";
+  }
+
+  
+
+
+
+
+
+
 
   /**
    * Porfolio isotope and filter
