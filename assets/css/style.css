@@ -12,7 +12,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.jpg") top right no-repeat;
+  background: #040404 url("../img/bg.png") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -736,7 +736,7 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #18d26e;
+  background-color: #444444;
   border-color: #18d26e;
 }
 
@@ -1038,6 +1038,10 @@ section .container {
 .img-logo {
   margin-right: 15px;
 }
+.img-logo-portafolio {
+  margin: 10px;
+}
+
 
 .text-justify{
   text-align: justify;
@@ -1070,8 +1074,4 @@ section .container {
   line-height: 24px;
   font-size: 14px;
   margin: 0 0 0 68px;
-}
-
-.text-white {
-  color: white;
 }

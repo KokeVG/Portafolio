@@ -193,37 +193,37 @@
       desc: 'Sistema de gestión vehicular con reconocimiento de patentes vehiculares para recinto, permite ver y registrar datos asociados entre vehiculos, estacionamientos y departamentos ademas de reconocer las patentes vehiculares por medio de visión computacional.',
       github: 'https://github.com/KokeVG/gestion-vehicular',
       imgs: ['assets/img/portafolio/gestion-vehicular/gestion1.png'],
-      herramientas: ['assets/img/skills/django.png', 'assets/img/skills/python.png', 'assets/img/skills/mysql.png']
+      herramientas: ['django.png', 'python.png', 'mysql.png']
     },
     {
       nombre: 'Gestión vehicular móvil',
       desc: 'Aplicación móvil que permite ver el estado de los estacionamients registrados en el sistema Gestión vehicular por medio de una API.',
       github: 'https://github.com/KokeVG/gestion-vehicular-movil',
       imgs: ['assets/img/portafolio/gestion-vehicular-movil/gestion-movil1.png', 'assets/img/portafolio/gestion-vehicular-movil/gestion-movil2.png'],
-      herramientas: ['assets/img/skills/reactnative.png']
+      herramientas: ['reactnative.png']
     },
     {
       nombre: 'Promediando',
       desc: 'Aplicación móvil android que permite calcular promedios de notas ponderados para un entorno estudiantil.',
-      pagina: 'https://play.google.com/store/apps/details?id=koke.promediando',
+      pagina: { sitio: 'Google Play', link: 'https://play.google.com/store/apps/details?id=koke.promediando'}, 
       github: 'https://github.com/KokeVG/promediando',
       imgs: ['assets/img/portafolio/promediando/promediando1.png', 'assets/img/portafolio/promediando/promediando2.png', 'assets/img/portafolio/promediando/promediando3.png', 'assets/img/portafolio/promediando/promediando4.png'],
-      herramientas: ['assets/img/skills/android-studio.png', 'assets/img/skills/java.png']
+      herramientas: ['android-studio.png', 'java.png']
     },
     {
       nombre: 'Organilab móvil',
       desc: 'Aplicación móvil que permite ver la disponibiliad de los dispositivos de un establecimiento.',
-      pag: 'https://play.google.com/store/apps/details?id=koke.organilab',
+      pagina: { sitio: 'Google Play', link: 'https://play.google.com/store/apps/details?id=koke.organilab'},
       github: 'https://github.com/KokeVG/organilab-movil',
       imgs: ['assets/img/portafolio/organilab-movil/organilab1.png', 'assets/img/portafolio/organilab-movil/organilab2.png', 'assets/img/portafolio/organilab-movil/organilab3.png'],
-      herramientas: ['assets/img/skills/ionic.png', 'assets/img/skills/java.png']
+      herramientas: ['ionic.png']
     },
     {
       nombre: 'Agenda telefónica',
       desc: 'Aplicación Java que permite crear, ver, editar y eliminar datos de agenda de contactos.',
       github: 'https://github.com/KokeVG/agenda-telefonica',
       imgs: ['assets/img/portafolio/agenda-telefonica/agenda1.png', 'assets/img/portafolio/agenda-telefonica/agenda2.png', 'assets/img/portafolio/agenda-telefonica/agenda3.png'],
-      herramientas: ['assets/img/skills/java.png']
+      herramientas: ['java.png']
     }]
 
   var obtenerProyectos = function() {
@@ -243,24 +243,46 @@
         div.appendChild(div2);
           var img = document.createElement('img');
           img.setAttribute('src', item.imgs[0]);
+          img.setAttribute('alt', item.nombre);
           img.setAttribute('class', 'img-fluid');
+          //img.setAttribute('width', 800);
+          //img.setAttribute('height', 600);
           var h4 = document.createElement('h4');
-          h4.setAttribute('class', 'text-white');
           h4.appendChild(document.createTextNode(item.nombre));
           var p = document.createElement('p');
-          p.setAttribute('class', 'text-justify text-white');
           p.appendChild(document.createTextNode(item.desc));
           var gh = document.createElement('p');
-          gh.setAttribute('class', 'text-white');
+          var elgh = document.createElement('i');
+          elgh.setAttribute('class', 'bx bx-link-external');
           var agh = document.createElement('a');
           agh.setAttribute('href', item.github);
           agh.setAttribute('target', '_blank');
-          agh.appendChild(document.createTextNode(item.github));
-          gh.appendChild(agh);
+          gh.appendChild(document.createTextNode('Github'));
+          gh.appendChild(elgh);
+          agh.appendChild(gh);
           div2.appendChild(img);
           div2.appendChild(h4);
           div2.appendChild(p);
-          div2.appendChild(gh);
+          div2.appendChild(agh);
+          if(item.pagina != undefined){
+            var link = document.createElement('p');
+            var alink = document.createElement('a');
+            var el = document.createElement('i');
+            el.setAttribute('class', 'bx bx-link-external');
+            alink.setAttribute('href', item.pagina.link);
+            alink.setAttribute('target', '_blank');
+            link.appendChild(document.createTextNode(item.pagina.sitio));
+            link.appendChild(el);
+            alink.appendChild(link);
+            div2.appendChild(alink);
+          }
+          for(var i=0; i<item.herramientas.length; i++){
+            var logo = document.createElement('img');
+            logo.setAttribute('src', 'assets/img/skills/'+item.herramientas[i]);
+            logo.setAttribute('class', 'img-logo-portafolio');
+            logo.setAttribute('alt', item.herramientas[i]);
+            div2.appendChild(logo);
+          }
 
       fragment.appendChild(div);  
     }
