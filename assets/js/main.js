@@ -245,8 +245,8 @@
           img.setAttribute('src', item.imgs[0]);
           img.setAttribute('alt', item.nombre);
           img.setAttribute('class', 'img-fluid');
-          //img.setAttribute('width', 800);
-          //img.setAttribute('height', 600);
+          img.setAttribute('width', 800);
+          img.setAttribute('height', 600);
           var h4 = document.createElement('h4');
           h4.appendChild(document.createTextNode(item.nombre));
           var p = document.createElement('p');

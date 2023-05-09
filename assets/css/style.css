@@ -752,10 +752,15 @@ section .container {
   background: #35e888;
 }
 
-.services .icon-box:hover h4 a,
+.services .img-fluid{
+  height: 300px;
+  max-width: 360px;
+}
+
+/* .services .icon-box:hover h4 a,
 .services .icon-box:hover p {
   color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1075,3 +1080,5 @@ section .container {
   font-size: 14px;
   margin: 0 0 0 68px;
 }
+
+
