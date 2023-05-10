@@ -752,10 +752,19 @@ section .container {
   background: #35e888;
 }
 
-.services .img-fluid{
+.services .dim{
   height: 300px;
   max-width: 360px;
 }
+
+@supports(object-fit:cover){
+
+  .services .dim{
+    max-width: 360px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center;}
+  }
 
 /* .services .icon-box:hover h4 a,
 .services .icon-box:hover p {
@@ -1105,17 +1114,6 @@ section .container {
   max-width: 700px;
 }
 
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
 
 /* Add Animation */
 .modal-content, #caption {  
@@ -1125,7 +1123,7 @@ section .container {
   animation-duration: 0.6s;
 }
 
-@-webkit-keyframes zoom {
+/* @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)} 
   to {-webkit-transform:scale(1)}
 }
@@ -1133,7 +1131,7 @@ section .container {
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
-}
+} */
 
 /* The Close Button */
 .close {
@@ -1167,4 +1165,25 @@ section .container {
   text-align: left;
   position: relative;
   left: 10%;
+}
+
+.img-margin-bottom{
+  margin-bottom: 3%;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
 }

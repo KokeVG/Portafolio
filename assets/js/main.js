@@ -184,125 +184,7 @@
     }
   });
 
-  /**
-   * Portafolio proyectos
-   */
-
-  let proyectos = [{
-      id: 1,
-      nombre: 'Gestión vehicular',
-      desc: 'Sistema de gestión vehicular con reconocimiento de patentes vehiculares para recinto, permite ver y registrar datos asociados entre vehiculos, estacionamientos y departamentos ademas de reconocer las patentes vehiculares por medio de visión computacional.',
-      github: 'https://github.com/KokeVG/gestion-vehicular',
-      imgs: ['assets/img/portafolio/gestion-vehicular/gestion1.png'],
-      herramientas: ['django.png', 'python.png', 'mysql.png']
-    },
-    {
-      id: 2,
-      nombre: 'Gestión vehicular móvil',
-      desc: 'Aplicación móvil que permite ver el estado de los estacionamients registrados en el sistema Gestión vehicular por medio de una API.',
-      github: 'https://github.com/KokeVG/gestion-vehicular-movil',
-      imgs: ['assets/img/portafolio/gestion-vehicular-movil/gestion-movil1.png', 'assets/img/portafolio/gestion-vehicular-movil/gestion-movil2.png'],
-      herramientas: ['reactnative.png']
-    },
-    {
-      id: 3,
-      nombre: 'Promediando',
-      desc: 'Aplicación móvil android que permite calcular promedios de notas ponderados para un entorno estudiantil.',
-      pagina: { sitio: 'Google Play', link: 'https://play.google.com/store/apps/details?id=koke.promediando'}, 
-      github: 'https://github.com/KokeVG/promediando',
-      imgs: ['assets/img/portafolio/promediando/promediando1.png', 'assets/img/portafolio/promediando/promediando2.png', 'assets/img/portafolio/promediando/promediando3.png', 'assets/img/portafolio/promediando/promediando4.png'],
-      herramientas: ['android-studio.png', 'java.png']
-    },
-    {
-      id: 4,
-      nombre: 'Organilab móvil',
-      desc: 'Aplicación móvil que permite ver la disponibiliad de los dispositivos de un establecimiento.',
-      pagina: { sitio: 'Google Play', link: 'https://play.google.com/store/apps/details?id=koke.organilab'},
-      github: 'https://github.com/KokeVG/organilab-movil',
-      imgs: ['assets/img/portafolio/organilab-movil/organilab1.png', 'assets/img/portafolio/organilab-movil/organilab2.png', 'assets/img/portafolio/organilab-movil/organilab3.png'],
-      herramientas: ['ionic.png']
-    },
-    {
-      id: 5,
-      nombre: 'Agenda telefónica',
-      desc: 'Aplicación Java que permite crear, ver, editar y eliminar datos de agenda de contactos.',
-      github: 'https://github.com/KokeVG/agenda-telefonica',
-      imgs: ['assets/img/portafolio/agenda-telefonica/agenda1.png', 'assets/img/portafolio/agenda-telefonica/agenda2.png', 'assets/img/portafolio/agenda-telefonica/agenda3.png'],
-      herramientas: ['java.png']
-    }]
-
-  var obtenerProyectos = function() {
-    var resultado = document.getElementById('div-proyectos'); 
-    var fragment = document.createDocumentFragment();
-    
-    for(let item of proyectos) {
-      var div = document.createElement('div');
-      switch(item.id){
-        case 1: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch');
-        case 2: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0');
-        case 3: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0');
-        default: div.setAttribute('class', 'col-lg-4 col-md-6 d-flex align-items-stretch mt-4');
-      }
-        var div2 = document.createElement('div');
-        div2.setAttribute('class', 'icon-box');
-        div.appendChild(div2);
-          var img = document.createElement('img');
-          img.setAttribute('id', 'img'+item.id);
-          img.setAttribute('src', item.imgs[0]);
-          img.setAttribute('alt', item.nombre);
-          img.setAttribute('class', 'img-fluid');
-          img.setAttribute('width', 800);
-          img.setAttribute('height', 600);
-          var h4 = document.createElement('h4');
-          h4.appendChild(document.createTextNode(item.nombre));
-          var p = document.createElement('p');
-          p.appendChild(document.createTextNode(item.desc));
-          div2.appendChild(img);
-          div2.appendChild(h4);
-          div2.appendChild(p);
-          for(var i=0; i<item.herramientas.length; i++){
-            var logo = document.createElement('img');
-            logo.setAttribute('src', 'assets/img/skills/'+item.herramientas[i]);
-            logo.setAttribute('class', 'img-logo-portafolio');
-            logo.setAttribute('alt', item.herramientas[i]);
-            div2.appendChild(logo);
-          }
-
-
-
-          var gh = document.createElement('p');
-          gh.setAttribute('class', 'text-izq');
-          var elgh = document.createElement('i');
-          elgh.setAttribute('class', 'bx bx-link-external');
-          var agh = document.createElement('a');
-          agh.setAttribute('href', item.github);
-          agh.setAttribute('target', '_blank');
-          gh.appendChild(document.createTextNode('Github'));
-          gh.appendChild(elgh);
-          agh.appendChild(gh);
-          div2.appendChild(agh);
-          if(item.pagina != undefined){
-            var link = document.createElement('p');
-            link.setAttribute('class', 'text-izq');
-
-            var alink = document.createElement('a');
-            var el = document.createElement('i');
-            el.setAttribute('class', 'bx bx-link-external');
-            alink.setAttribute('href', item.pagina.link);
-            alink.setAttribute('target', '_blank');
-            link.appendChild(document.createTextNode(item.pagina.sitio));
-            link.appendChild(el);
-            alink.appendChild(link);
-            div2.appendChild(alink);
-          }
-          
-
-      fragment.appendChild(div);  
-    }
-    resultado.appendChild(fragment);
-  }
-  obtenerProyectos();
-
+  
 
   // Get the modal
   var modal = document.getElementById("modal");
@@ -419,3 +301,119 @@
   new PureCounter();
 
 })()
+
+// Slide
+var currentSlide = function(p,n) {
+  switch(p){
+    case 1: 
+      var img = document.getElementById('img1');
+      var dot1 = document.getElementById('dot1.1');
+
+      switch(n){
+        case 1: 
+          img.setAttribute('src', 'assets/img/portafolio/gestion-vehicular/gestion1.png');
+          dot1.setAttribute('class', 'dot active');
+          break;
+      }
+      break;
+    case 2: 
+      var img = document.getElementById('img2');
+      var dot1 = document.getElementById('dot2.1');
+      var dot2 = document.getElementById('dot2.2');
+      var dot3 = document.getElementById('dot2.3');
+
+      switch(n){
+        case 1: 
+          img.setAttribute('src', 'assets/img/portafolio/gestion-vehicular-movil/gestion-movil1.png');
+          dot1.setAttribute('class', 'dot active');
+          dot2.setAttribute('class', 'dot');
+          dot3.setAttribute('class', 'dot');
+          break;
+        case 2: 
+          img.setAttribute('src', 'assets/img/portafolio/gestion-vehicular-movil/gestion-movil2.png');
+          dot1.setAttribute('class', 'dot');
+          dot2.setAttribute('class', 'dot active');
+          dot3.setAttribute('class', 'dot');
+          break;
+        case 3: 
+          img.setAttribute('src', 'assets/img/portafolio/gestion-vehicular-movil/gestion-movil3.png');
+          dot1.setAttribute('class', 'dot');
+          dot2.setAttribute('class', 'dot');
+          dot3.setAttribute('class', 'dot active');
+          break;
+      }
+      break;
+    case 3:
+      var img = document.getElementById('img3');
+      var dot1 = document.getElementById('dot3.1');
+      var dot2 = document.getElementById('dot3.2');
+      var dot3 = document.getElementById('dot3.3');
+
+      switch(n){
+        case 1: 
+          img.setAttribute('src', 'assets/img/portafolio/promediando/promediando1.png');
+          dot1.setAttribute('class', 'dot active');
+          dot2.setAttribute('class', 'dot');
+          dot3.setAttribute('class', 'dot');
+          break;
+        case 2: 
+          img.setAttribute('src', 'assets/img/portafolio/promediando/promediando2.png');
+          dot1.setAttribute('class', 'dot');
+          dot2.setAttribute('class', 'dot active');
+          dot3.setAttribute('class', 'dot');
+          break;
+        case 3: 
+          img.setAttribute('src', 'assets/img/portafolio/promediando/promediando3.png');
+          dot1.setAttribute('class', 'dot');
+          dot2.setAttribute('class', 'dot');
+          dot3.setAttribute('class', 'dot active');
+          break;
+      }
+      break;
+    case 4:
+      var img = document.getElementById('img4');
+      var dot1 = document.getElementById('dot4.1');
+      var dot2 = document.getElementById('dot4.2');
+
+      switch(n){
+        case 1: 
+          img.setAttribute('src', 'assets/img/portafolio/organilab-movil/organilab1.png');
+          dot1.setAttribute('class', 'dot active');
+          dot2.setAttribute('class', 'dot');
+          break;
+        case 2: 
+          img.setAttribute('src', 'assets/img/portafolio/organilab-movil/organilab2.png');
+          dot1.setAttribute('class', 'dot');
+          dot2.setAttribute('class', 'dot active');
+          break;
+      }
+      break;
+    case 5:
+      var img = document.getElementById('img5');
+      var dot1 = document.getElementById('dot5.1');
+      var dot2 = document.getElementById('dot5.2');
+      var dot3 = document.getElementById('dot5.3');
+
+      switch(n){
+        case 1: 
+          img.setAttribute('src', 'assets/img/portafolio/agenda-telefonica/agenda1.png');
+          dot1.setAttribute('class', 'dot active');
+          dot2.setAttribute('class', 'dot');
+          dot3.setAttribute('class', 'dot');
+          break;
+        case 2: 
+          img.setAttribute('src', 'assets/img/portafolio/agenda-telefonica/agenda2.png');
+          dot1.setAttribute('class', 'dot');
+          dot2.setAttribute('class', 'dot active');
+          dot3.setAttribute('class', 'dot');
+          break;
+        case 3: 
+          img.setAttribute('src', 'assets/img/portafolio/agenda-telefonica/agenda3.png');
+          dot1.setAttribute('class', 'dot');
+          dot2.setAttribute('class', 'dot');
+          dot3.setAttribute('class', 'dot active');
+          break;
+      }
+      break;
+  }
+};
