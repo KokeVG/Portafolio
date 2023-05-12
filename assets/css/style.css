@@ -752,10 +752,24 @@ section .container {
   background: #35e888;
 }
 
-.services .icon-box:hover h4 a,
+.services .dim{
+  height: 300px;
+  max-width: 360px;
+}
+
+@supports(object-fit:cover){
+
+  .services .dim{
+    max-width: 360px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center;}
+  }
+
+/* .services .icon-box:hover h4 a,
 .services .icon-box:hover p {
   color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1074,4 +1088,89 @@ section .container {
   line-height: 24px;
   font-size: 14px;
   margin: 0 0 0 68px;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 10%;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.text-izq{
+  text-align: left;
+  position: relative;
+  left: 10%;
+}
+
+.img-margin-bottom{
+  margin-bottom: 3%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
 }

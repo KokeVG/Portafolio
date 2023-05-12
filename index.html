@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
   <head>
     <meta charset="utf-8">
@@ -35,11 +35,8 @@
       <div class="container">
 
         <h1><a href="index.html">José Vásquez</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-        <h2>Soy un apasionado del <span>desarrollo web</span> en Chile.</h2>
+        <h2>Desarrollador de software interesado en desarrollo <span>web</span> y <span>móvil</span>.</h2>
 
-        <!-- ======= Navbar ======= -->
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link active" href="#inicio">Inicio</a></li>
@@ -66,13 +63,18 @@
           <p>Aprende más de mí</p>
         </div>
 
+        <div class="content">
+          <h3 >Ingeniero Civil en Computación e Informática</h3>
+        </div>
+
         <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
+          <!-- <div class="col-lg-4" data-aos="fade-right">
             <img src="assets/img/yo.jpeg" class="img-fluid" alt="">
+          </div> -->
+          <div class="col-lg-7 pt-4 pt-lg-0 content">
+            <p class="text-justify">Desarrollador de software con interes en desarrollar aplicaciones web y móviles, me considero una persona responsable, paciente, proactivo, bueno en trabajo en equipo, con muchas ganas de aprender y crecer tanto personal como profesionalmente, con capacidad de aprendizaje rápido y dinámico para resolver problemas eficientemente.</p>
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Ingeniero Civil en Computación e Informática</h3>
-            <p class="text-justify">Recién titulado con disponibilidad inmediata, poseo muchas ganas de aprender y crecer personal y profesionalmente, soy una persona responsable, paciente, proactivo, bueno en trabajo en equipo, con capacidad de aprendizaje rápido y dinámico para resolver problemas eficientemente.</p>
+          <div class="col-lg-5 pt-4 pt-lg-0 content">
             <div class="row">
               <div class="col-lg-6">
                 <ul>
@@ -269,6 +271,18 @@
               <h3>Android Studio</h3>
             </div>
           </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <img src="assets/img/skills/raspberry.png" class="img-logo" alt="Raspberry Pi logo" >
+              <h3>Raspberry Pi</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <img src="assets/img/skills/arduino.png" class="img-logo" alt="Arduino logo" >
+              <h3>Arduino</h3>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -288,17 +302,6 @@
         </div>
 
         <div class="row">
-          <div class="col-md-12 d-flex align-items-stretch">
-            <div class="box-cv">
-              <i class="bx bx-file"></i>
-              <h3>Curriculum Vitae</h3>
-              <p><a href="assets/curriculum/CV.pdf" download="cv-jose-vasquez" target="_blank">Descargar</a></p>
-            </div>
-          </div>
-        </div>
-        
-
-        <div class="row">
           <div class="col-lg-2"></div>
           <div class="col-lg-8">
             <h3 class="resume-title">Educación</h3>
@@ -316,7 +319,7 @@
               <p>Desarrollador de aplicaciones móviles para dar solución a las problemáticas presentadas en la empresa.</p>
               <p>
                 <ul>
-                  <li>Desarrollo de aplicaciones moviles en el framework React Native.</li>
+                  <li>Desarrollo de aplicaciones móviles en el framework React Native.</li>
                   <li>Integración con Firebase realtime database y cloud storage</li>
                   <li>Almacenar datos de usuario en realtime database</li>
                   <li>Guardar datos en archivos .txt y subirlos a cloud storage</li>
@@ -356,6 +359,87 @@
 
         <div class="row" id="div-proyectos">
 
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <img id="img1" src="assets/img/portafolio/gestion-vehicular/gestion1.png" alt="Gestión vehicular" class="dim img-margin-bottom" >
+              <div style="text-align:center">
+                <span id="dot1.1" class="dot active" onclick="currentSlide(1,1)"></span> 
+              </div>
+              <h4>Gestión vehicular</h4>
+              <p>Sistema de gestión vehicular con reconocimiento de patentes vehiculares para recinto, permite ver y registrar datos asociados entre vehiculos, estacionamientos y departamentos ademas de reconocer las patentes vehiculares por medio de visión computacional.</p>
+              <img src="assets/img/skills/django.png" alt="django" class="img-logo-portafolio">
+              <img src="assets/img/skills/python.png" alt="python" class="img-logo-portafolio">
+              <img src="assets/img/skills/mysql.png" alt="mysql" class="img-logo-portafolio">
+              <a href="https://github.com/KokeVG/gestion-vehicular" target="_blank"><p class="text-izq">Github<i class="bx bx-link-external"></i></p></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <img id="img2" src="assets/img/portafolio/gestion-vehicular-movil/gestion-movil1.png" alt="Gestión vehicular móvil" class="dim img-margin-bottom" >
+              <div style="text-align:center">
+                <span id="dot2.1" class="dot active" onclick="currentSlide(2,1)"></span> 
+                <span id="dot2.2" class="dot" onclick="currentSlide(2,2)"></span> 
+                <span id="dot2.3" class="dot" onclick="currentSlide(2,3)"></span> 
+              </div>
+              <h4>Gestión vehicular móvil</h4>
+              <p>Aplicación móvil que permite ver el estado de los estacionamients registrados en el sistema Gestión vehicular por medio de una API.</p>
+              <img src="assets/img/skills/reactnative.png" alt="reactnative" class="img-logo-portafolio">
+              <a href="https://github.com/KokeVG/gestion-vehicular-movil" target="_blank"><p class="text-izq">Github<i class="bx bx-link-external"></i></p></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+              <div class="icon-box">
+                <img id="img3" src="assets/img/portafolio/promediando/promediando1.png" alt="Promediando" class="dim img-margin-bottom" >
+                <div style="text-align:center">
+                  <span id="dot3.1" class="dot active" onclick="currentSlide(3,1)"></span> 
+                  <span id="dot3.2" class="dot" onclick="currentSlide(3,2)"></span> 
+                  <span id="dot3.3" class="dot" onclick="currentSlide(3,3)"></span> 
+                </div>
+                <h4>Promediando</h4>
+                <p>Aplicación móvil android que permite calcular promedios de notas ponderados para un entorno estudiantil.</p>
+                <img src="assets/img/skills/android-studio.png" alt="android-studio" class="img-logo-portafolio">
+                <img src="assets/img/skills/java.png" alt="java" class="img-logo-portafolio">
+                <a href="https://github.com/KokeVG/promediando" target="_blank"><p class="text-izq">Github<i class="bx bx-link-external"></i></p></a>
+                <a href="https://play.google.com/store/apps/details?id=koke.promediando" target="_blank"><p class="text-izq">Google Play<i class="bx bx-link-external"></i></p></a>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <img id="img4" src="assets/img/portafolio/organilab-movil/organilab1.png" alt="Organilab móvil" class="dim img-margin-bottom" >
+              <div style="text-align:center">
+                <span id="dot4.1" class="dot active" onclick="currentSlide(4,1)"></span> 
+                <span id="dot4.2" class="dot" onclick="currentSlide(4,2)"></span> 
+              </div>
+              <h4>Organilab móvil</h4>
+              <p>Aplicación móvil que permite ver la disponibiliad de los dispositivos de un establecimiento.</p>
+              <img src="assets/img/skills/ionic.png" alt="ionic" class="img-logo-portafolio">
+              <a href="https://play.google.com/store/apps/details?id=koke.organilab" target="_blank"><p class="text-izq">Google Play<i class="bx bx-link-external"></i></p></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <img id="img5" src="assets/img/portafolio/agenda-telefonica/agenda1.png" alt="Agenda telefónica" class="dim img-margin-bottom" >
+              <div style="text-align:center">
+                <span id="dot5.1" class="dot active" onclick="currentSlide(5,1)"></span> 
+                <span id="dot5.2" class="dot" onclick="currentSlide(5,2)"></span> 
+                <span id="dot5.3" class="dot" onclick="currentSlide(5,3)"></span> 
+              </div>
+              <h4>Agenda telefónica</h4>
+              <p>Aplicación Java que permite crear, ver, editar y eliminar datos de agenda de contactos.</p>
+              <img src="assets/img/skills/java.png" alt="java" class="img-logo-portafolio">
+              <a href="https://github.com/KokeVG/agenda-telefonica" target="_blank"><p class="text-izq">Github<i class="bx bx-link-external"></i></p></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="modal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img-modal">
         </div>
 
       </div>
@@ -395,7 +479,7 @@
     <!-- ======= Fin Contacto ======= -->
 
 
-    <!-- Archivos Vendor JS -->
+    <!-- Archivos Vendor -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -404,7 +488,7 @@
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <!-- Archivo Main JS -->
+    <!-- Archivo main.js -->
     <script src="assets/js/main.js"></script>
 
   </body>
