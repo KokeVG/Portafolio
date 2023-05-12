@@ -1123,15 +1123,6 @@ section .container {
   animation-duration: 0.6s;
 }
 
-/* @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-} */
 
 /* The Close Button */
 .close {
@@ -1158,9 +1149,6 @@ section .container {
   }
 }
 
-
-
-
 .text-izq{
   text-align: left;
   position: relative;
@@ -1170,7 +1158,6 @@ section .container {
 .img-margin-bottom{
   margin-bottom: 3%;
 }
-
 
 /* The dots/bullets/indicators */
 .dot {
